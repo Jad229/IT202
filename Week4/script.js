@@ -4,8 +4,11 @@ function isUcidValid() {
 
     let re = /[a-zA-Z]+\d*/i;
 
+    //Test the ucidInput against the regular expression
     if (re.test(ucidInput)) {
-        if(ucidList.indexOf(ucidInput) > -1){
+
+        //checking if ucidInput is found within the array ucidList
+        if(ucidList.indexOf(ucidInput) > -1){ // if indexOf returns -1 ucid is not in the list
             alert("VALID UCID FORMAT AND UCID FOUND")
         }
         else{
