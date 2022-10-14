@@ -57,22 +57,24 @@ function addItem(item) {
 
 function moveItem(fromIndex, toIndex) {
    // TODO: Complete the function
-   let $itemToMove = $("ol").detach($(`li:eq(${fromIndex})`));
-   let $itemToReplace = $(`li:eq(${toIndex})`)
+   let $itemToReplace = $(`li:eq(${toIndex})`);
+   let $itemToMove = $(`li:eq(${fromIndex})`);
 
-   //moving item down
-   if(toIndex > fromIndex){
-      $($itemToReplace).before($itemToMove);
+   if(toIndex !== -1){
+      //moving item down
+      if(toIndex > fromIndex){
+         $($itemToReplace).after($itemToMove);
+      }
+      //moving item up
+      else if(toIndex < fromIndex){
+         $($itemToReplace).before($itemToMove);
+      }
    }
-   //moving item up
-   else if(toIndex < fromIndex){
-      $($itemToReplace).after($itemToMove);
-   }
+
 
 
 }
 
 function removeItem(index) {
-   // TODO: Complete the function
-   
+   $(`li:eq(${index})`).remove();
 }
