@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+
+  <form method="get" action="appt.php">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+    </p>
+    <p>
+        <label for="services">Service Needed:</label>
+            <select name="services" id="services">
+                 <option>Cleaning</option>
+                 <option>Extraction</option>
+                 <option>Filling</option>
+                 <option>Whitening</option>
+            </select>
+    </p>
+    <p>
+        <label for="numOfVisits">Number of Visits:</label>
+        <input type="number" name="numOfVisits" id="numOfVisits" required>
+    </p>
+    <p>
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" required>
+    </p>
+    <p>
+        <label for="tax">Tax Rate:</label>
+        <input type="number" name="tax" id="tax" required>
+    </p>
+    <input type="submit" value="submit">
+  </form>
+
+</body>
+</html>
